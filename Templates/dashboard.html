@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Raleyd</title>
 </head>
 <body>
 
-    {% for resultat in resultats %}
-        <p>L'id du capteur est : {{ resultat[0] }}</p>
-        <p>La temperature est de : {{ resultat[1] }}</p>
-        <p>L'humidité est de : {{ resultat[2] }}</p>
-        <p>Relevé effectué le :{{ resultat[3] }}</p>
-    {% endfor %}
+    <section>
+        {% for resultat in resultats %}
+
+                <p>Nom du capteur : {{ resultat[1] }}</p>
+                <p>La temperature est de : {{ resultat[6] }} °C</p>
+                <p>L'humidité est de : {{ resultat[7] }} %</p>
+                <p>Relevé effectué le :{{ resultat[3] }}</p>
+                <p>Relevé effectué  :{{ resultat[2] }}</p>
+
+        {% endfor %}
+    </section>
+
 </body>
 </html>
