@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Mon premier dashboard</title>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site</title>
+</head>
+<body>
 
-  <body>
-
-    <div class="content">
-      <header>
-        <div class="header-background"></div>
-        <div class="title">
-          <h1>
-            Mon dashboard blabla
-          </h1>
-        </div>
-      </header>
-
-      <main>
-        <div class="chartContainer">
-        </div>
-      </main>
-    </div>
-
-  </body>
-
+    {% for resultat in resultats %}
+        <p>L'id du capteur est : {{ resultat[0] }}</p>
+        <p>La temperature est de : {{ resultat[1] }}</p>
+        <p>L'humidité est de : {{ resultat[2] }}</p>
+        <p>Relevé effectué le :{{ resultat[3] }}</p>
+    {% endfor %}
+</body>
 </html>
