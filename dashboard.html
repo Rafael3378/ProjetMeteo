@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raleyd</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!--    <style>-->
+<!--        table, th, td {-->
+<!--          border: 1px solid black;-->
+<!--          border-collapse: collapse;-->
+<!--        }-->
+<!--        th, td {-->
+<!--          padding: 5px;-->
+<!--        }-->
+<!--        div {-->
+<!--            justify-content: space-between;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Raleyd
+            </div>
+            <div>
+                <a><i class="fa-sharp fa-solid fa-share"></i></a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+        {% for resultat in resultats %}
+            <table>
+                <tr>
+                    <td>Nom du capteur :</td>
+                    <td>{{ resultat[1] }}</td>
+                </tr>
+                <tr>
+                    <td>La temperature est de :</td>
+                    <td>{{ resultat[6] }}</td>
+                </tr>
+                <tr>
+                    <td>L'humidité est de :</td>
+                    <td>{{ resultat[7] }}</td>
+                </tr>
+                <tr>
+                    <td>Relevé effectué le :</td>
+                    <td>{{ resultat[3] }}</td>
+                </tr>
+                <tr>
+                    <td>Relevé effectué a :</td>
+                    <td>{{ resultat[9] }}</td>
+                </tr>
+
+            </table>
+        {% endfor %}
+    </section>
+
+</body>
+</html>
