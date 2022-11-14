@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import pymysql.cursors
 import backend
 
 
@@ -9,6 +8,7 @@ app = Flask(__name__) #lignes decorateur
 @app.route("/")
 def dashboard():
     result = backend.selectreleve()
+    print(result)
     return render_template("dashboard.html", resultats = result)
 
 if __name__ == "__main__":
