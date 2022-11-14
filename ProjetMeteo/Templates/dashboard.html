@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raleyd</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Raleyd</a>
+            </div>
+            <div>
+                <a><i class='bx bxs-share'></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="container__atmos">
+            <figure>
+                <img src="{{ url_for('static', filename='img/atmos.png') }}">
+            </figure>
+        </div>
+        <p>Vos données météorologique accessible chez vous </p>
+    </section><hr>
+
+    <section class="data">
+        <div class="data__container">
+            <div class="data__container__card">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 62192233 %}
+
+                        <table>
+                            <tr>
+                                <td>Nom capteur :</td>
+                                <td>{{ resultat[2] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature :</td>
+                                <td>{{ resultat[6] }} °C</td>
+                            </tr>
+                            <tr>
+                                <td>Humidité :</td>
+                                <td>{{ resultat[7] }} %</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué le :</td>
+                                <td>{{ resultat[3] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué a :</td>
+                                <td>{{ resultat[9] }}</td>
+                            </tr>
+
+                        </table>
+                    {% endif %}
+                {% endfor %}
+            </div> <br>
+
+            <div class="data__container__card">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 6182660 %}
+                        <table>
+                            <tr>
+                                <td>Nom capteur :</td>
+                                <td>{{ resultat[2] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature :</td>
+                                <td>{{ resultat[6] }} °C</td>
+                            </tr>
+                            <tr>
+                                <td>Humidité :</td>
+                                <td>{{ resultat[7] }} %</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué le :</td>
+                                <td>{{ resultat[3] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué a :</td>
+                                <td>{{ resultat[9] }}</td>
+                            </tr>
+
+                        </table>
+                    {% endif %}
+                {% endfor %}
+            </div> <br>
+
+            <div class="data__container__card">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 6190484 %}
+                        <table>
+                            <tr>
+                                <td>Nom capteur :</td>
+                                <td>{{ resultat[2] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature :</td>
+                                <td>{{ resultat[6] }} °C</td>
+                            </tr>
+                            <tr>
+                                <td>Humidité :</td>
+                                <td>{{ resultat[7] }} %</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué le :</td>
+                                <td>{{ resultat[3] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Effectué a :</td>
+                                <td>{{ resultat[9] }}</td>
+                            </tr>
+
+                        </table>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section> <hr>
+
+    <section class="container">
+        <div class="container__graphique">
+            <div class="container__graphique__img">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 62192233 %}
+                        <h2>Capteur 1 : {{ resultat[2] }}</h2>
+                    {% endif %}
+                {% endfor %}
+                        <figure>
+                            <img src="{{ url_for('static', filename='img/graphique.png') }}">
+                        </figure>
+            </div>
+
+            <div class="container__graphique__img">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 6182660 %}
+                        <h2>Capteur 1 : {{ resultat[2] }}</h2>
+                    {% endif %}
+                {% endfor %}
+                        <figure>
+                            <img src="{{ url_for('static', filename='img/graphique.png') }}">
+                        </figure>
+            </div>
+
+            <div class="container__graphique__img">
+                {% for resultat in resultats %}
+                    {% if resultat[1] == 6190484 %}
+                        <h2>Capteur 1 : {{ resultat[2] }}</h2>
+                    {% endif %}
+                {% endfor %}
+                        <figure>
+                            <img src="{{ url_for('static', filename='img/graphique.png') }}">
+                        </figure>
+            </div>
+        </div>
+    </section> <hr>
+
+    <section>
+        <div class="container">
+            <figure>
+                <img class="container__carte" src="{{ url_for('static', filename='img/carte.png') }}">
+            </figure>
+            
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

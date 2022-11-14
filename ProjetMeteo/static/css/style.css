@@ -1,0 +1,141 @@
+/** Reglages ****/
+* {
+    box-sizing: border-box;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/********* HEADER ************/
+
+header {
+    background: black;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: 10px;
+}
+
+.fa-sharp {
+    width: 30px;
+    height: 30px;
+    color: #f2821a;
+}
+
+/********* SECTION ATMOS ***********/
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container__atmos {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+/********* SECTION CARD *************/
+
+.data {
+    padding: 10px;
+}
+
+.data__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data__container__card {
+    border-radius: 15px;
+    background: #f2821a;
+}
+
+/********** SECTION GRAPHIQUE ***********/
+
+
+
+.container__graphique__img {
+    text-align: center;
+}
+
+.container__graphique__img h2 {
+    background: #f2821a;
+    color: white;
+    border-radius: 15px;
+}
+
+/************** SECTION CARTE *********************/
+
+.container__carte {
+    width: 100%;
+    border: 2px solid #f2821a;
+}
+
+/************* RESPONSIVE TABLETTE ***************/
+
+@media screen and (min-width: 768px) {
+    .data__container {
+        flex-direction: row;
+    }
+
+    .container__graphique {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container__graphique {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
