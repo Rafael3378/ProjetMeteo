@@ -8,7 +8,6 @@ app = Flask(__name__) #lignes decorateur
 @app.route("/")
 def dashboard():
     result = backend.selectreleve()
-    print(result)
     return render_template("dashboard.html", resultats = result)
 
 if __name__ == "__main__":
